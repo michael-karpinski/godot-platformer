@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Goal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2080, -460 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( -2293781, 0, 0, -2228245, 0, 0, -2162709, 0, 0, -2228154, 0, 0, -2097173, 0, 0, -2162618, 0, 0, -2031637, 0, 0, -2097082, 0, 0, -1966101, 0, 0, -2031546, 0, 0, -1900565, 0, 0, -1966010, 0, 0, -1835029, 0, 0, -1900474, 0, 0, -1769493, 0, 0, -1834938, 0, 0, -1703957, 0, 0, -1769402, 0, 0, -1638421, 0, 0, -1703866, 0, 0, -1572885, 0, 0, -1638330, 0, 0, -1507349, 0, 0, -1572794, 0, 0, -1441813, 0, 0, -1507258, 0, 0, -1376277, 0, 0, -1441722, 0, 0, -1310741, 0, 0, -1376186, 0, 0, -1245205, 0, 0, -1310650, 0, 0, -1179669, 0, 0, -1245114, 0, 0, -1114133, 0, 0, -1179578, 0, 0, -1048597, 0, 0, -1114042, 0, 0, -983061, 0, 0, -1048506, 0, 0, -917525, 0, 0, -982970, 0, 0, -851989, 0, 0, -917434, 0, 0, -786453, 0, 0, -851918, 0, 0, -851917, 0, 0, -851916, 0, 0, -851915, 0, 0, -851914, 0, 0, -851913, 0, 0, -851912, 0, 0, -851911, 0, 0, -851910, 0, 0, -851909, 0, 0, -851908, 0, 0, -851907, 0, 0, -851906, 0, 0, -851905, 0, 0, -851904, 0, 0, -851903, 0, 0, -851902, 0, 0, -851901, 0, 0, -851900, 0, 0, -851899, 0, 0, -851898, 0, 0, -720917, 0, 0, -786382, 0, 0, -655381, 0, 0, -720846, 0, 0, -589845, 0, 0, -655310, 0, 0, -524309, 0, 0, -589774, 0, 0, -458773, 0, 0, -524276, 0, 0, -524275, 0, 0, -524274, 0, 0, -524273, 0, 0, -524272, 0, 0, -524243, 0, 0, -524242, 0, 0, -524241, 0, 0, -524240, 0, 0, -524239, 0, 0, -524238, 0, 0, -393237, 0, 0, -458707, 0, 0, -327701, 0, 0, -393171, 0, 0, -262165, 0, 0, -327655, 0, 0, -327654, 0, 0, -327653, 0, 0, -327652, 0, 0, -327651, 0, 0, -327650, 0, 0, -327649, 0, 0, -327635, 0, 0, -196629, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -262126, 0, 0, -262125, 0, 0, -262124, 0, 0, -262123, 0, 0, -262122, 0, 0, -262121, 0, 0, -262120, 0, 0, -262119, 0, 0, -262099, 0, 0, -131093, 0, 0, -196590, 0, 0, -196568, 0, 0, -196567, 0, 0, -196566, 0, 0, -196565, 0, 0, -196564, 0, 0, -196563, 0, 0, -65557, 0, 0, -131054, 0, 0, -21, 0, 0, -65518, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( -410, -130 )
+
+[node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 120, -68 )
+jump_force = 250
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 826.773, -224.702 )
+movement_range = 150
+speed = 125
+jump_force = 350
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1370, -150 )
+movement_range = 90
+speed = 100
+jump_force = 400
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1520, -330 )
+movement_range = 0
+speed = 0
+jump_force = 200
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1720, -470 )
+movement_range = 90
+speed = 150
+jump_force = 350
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 460, -280 )
+movement_range = 0
+speed = 0
+jump_force = 600
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 240, -160 )
+movement_range = 0
+speed = 0
+jump_force = 450
